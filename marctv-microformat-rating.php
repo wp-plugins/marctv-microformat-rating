@@ -23,7 +23,7 @@
 function marctv_post_add_rating_style() {
     global $wp_query;
     $this_post = $wp_query->get_queried_object();
-    if (is_object($this_post)) {
+    if (is_single($this_post)) {
         $id = $this_post->ID;
         if (function_exists('get_post_meta') && get_post_meta($id, 'rating', true) != '') {
 
@@ -37,7 +37,7 @@ function marctv_post_add_rating_style() {
 function marctv_post_add_rating($content = '') {
     global $wp_query;
     $this_post = $wp_query->get_queried_object();
-    if (is_object($this_post)) {
+    if (is_single($this_post)) {
         $id = $this_post->ID;
         if (function_exists('get_post_meta') && get_post_meta($id, 'rating', true) != '') {
             $rating_summary = get_post_meta($id, "rating_summary", true);

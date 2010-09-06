@@ -1,6 +1,6 @@
 === MarcTV Microformat Rating ===
 Contributors: marcdk
-Tags: microformat
+Tags: microformat, hreview
 Requires at least: 3.0
 Tested up to: 3.0
 Stable tag: 1.0
@@ -19,4 +19,8 @@ Adds a hreview rating below the content of an article. Use custom field "rating"
 
 = 1.0 =
 
-First version.
+* First version.
+
+= 1.1 =
+
+* Fixed $id bug on archive pages
