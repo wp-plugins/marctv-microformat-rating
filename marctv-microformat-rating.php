@@ -4,7 +4,7 @@
   Plugin Name: MarcTV Microformat Rating
   Plugin URI: http://www.marctv.de/blog/2010/08/25/marctv-wordpress-plugins/
   Description: Adds a microformat rating markup under the article.
-  Version: 1.0
+  Version: 1.2
   Author: Marc Tönsing
   Author URI: http://www.marctv.de
   License: GPL2
@@ -47,7 +47,7 @@ function marctv_post_add_rating($content = '') {
             $content .= '<span class="fn">' . get_the_author() . ' </span>';
             $content .= '</span>';
             $content .= '<span class="item">';
-            $content .= '<span class="fn"><?php the_title(); ?></span> - ';
+            $content .= '<span class="fn">' . get_the_title($id) . '</span> - ';
             $content .= '</span>';
             $content .= '<span class="summary">' . $rating_summary . '</span> ';
             $content .= '<div class="rating">Rating: ';
